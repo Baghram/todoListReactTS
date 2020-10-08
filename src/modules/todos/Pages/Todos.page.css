@@ -1,6 +1,29 @@
-#TodosBoard {
+.background {
+  background-color: plum;
+  height: 100%;
+  width: 98vw;
+  padding-top: 1vh;
+  /* margin-top: -21vh;
+  margin-left: -3vw;
+  margin-right: 60vw;
+  padding-top: 10vh; */
+}
+.TodosBoard {
   width: 60%;
   margin-left: 20%;
   margin-top: 10%;
   background-color: orange;
+  border-width: 2;
+  border-style: solid;
+  height: 80%;
+  overflow: auto;
+}
+.TodosTitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.ModalUpdate {
+  margin-left: 10;
+  margin-right:10;
+  padding-left: 10;
 }

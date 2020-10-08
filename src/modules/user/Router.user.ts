@@ -6,6 +6,11 @@ const Routes: any = [
     name: 'Login',
     component: React.lazy(() => import('modules/user/Pages/Login.page')),
   },
+  {
+    path: '/register',
+    name: 'Register',
+    component: React.lazy(() => import('modules/user/Pages/Register.page'))
+  }
 ];
 
 export default Routes;
