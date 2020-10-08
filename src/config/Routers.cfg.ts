@@ -8,10 +8,14 @@ import React from 'react'; // eslint-disable-line
 // import RouterExample from '../modules/example/RouterExample';
 
 import RouterHome from 'modules/home/Router.home';
+import RouterUser from 'modules/user/Router.user';
+import RouterTodos from 'modules/todos/Router.todos';
 
 export const RouterContainer = [
   // ...RouterExample,
   ...RouterHome,
+  ...RouterUser,
+  ...RouterTodos,
 ];
 
 export const RouterNonContainer = [
