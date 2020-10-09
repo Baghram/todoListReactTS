@@ -1,10 +1,10 @@
 import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { Form, FormGroup, Label, Button } from 'reactstrap';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import Axios from 'axios';
 
 const Login = () => {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,10 +28,10 @@ const Login = () => {
         console.log(`Success!!`);
         if (result.data.Token) {
           localStorage.setItem('Token', result.data.Token);
-          setLoggedIn(true)
+          setLoggedIn(true);
         }
-        if (result.data.message === "Login Failed") {
-          setLoggedIn(false)
+        if (result.data.message === 'Login Failed') {
+          setLoggedIn(false);
         }
       })
       .catch((err: any) => {
@@ -41,12 +41,12 @@ const Login = () => {
   //useEffect for checking logged in or not
   useEffect(() => {
     if (localStorage.getItem('Token')) {
-      setLoggedIn(true)
+      setLoggedIn(true);
     }
-  }, [])
+  }, []);
 
   if (loggedIn) {
-    return <Redirect to="/todos"></Redirect>
+    return <Redirect to="/todos"></Redirect>;
   }
 
   return (

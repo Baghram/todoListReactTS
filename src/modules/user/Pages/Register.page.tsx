@@ -1,12 +1,12 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Form, FormGroup, Label, Button } from 'reactstrap';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import Axios from 'axios';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [register, setRegister] = useState(false)
+  const [register, setRegister] = useState(false);
 
   const typeEmail = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -25,13 +25,13 @@ const Register = () => {
       },
       data: {
         email: email,
-        password: password
-      }
+        password: password,
+      },
     })
-      .then(result => {
+      .then((result) => {
         console.log(`Success!!`);
         console.log(result.data);
-        setRegister(true)
+        setRegister(true);
       })
       .catch((err) => {
         console.log(err);
@@ -39,7 +39,7 @@ const Register = () => {
   };
   //after register redirect to login page
   if (register) {
-    return <Redirect to="/login"></Redirect>
+    return <Redirect to="/login"></Redirect>;
   }
 
   return (
